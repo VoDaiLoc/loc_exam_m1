@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function giaiPTBac2(a, b, c) {
+            let Delta = b * b - 4 * a * c;
+            let x1 = (-b - Math.sqrt(Delta)) / (2 * a);
+            let x2 = (-b + Math.sqrt(Delta)) / (2 * a);
+            let x = (-b) / (2 * a);
+            if (a == 0) {
+                if (b == 0) {
+                    if (c == 0) {
+                        document.write('Phương trình có vô số nghiệm.');
+                    }
+                    else {
+                        document.write('Phương trình vô nghiệm');
+                    }
+                }
+                else {
+                    document.write(`Phương trình có nghiệm duy nhất: x= ${(-c) / b}`);
+                }
+            }
+            else {
+                if (Delta > 0) {
+                    document.write(`Phương trình có 2 nghiệm phân biệt: x1=${(-b + Math.sqrt(Delta)) / (2 * a)}; x2= ${(-b - Math.sqrt(Delta)) / (2 * a)}`);
+                }
+                else if (Delta == 0) {
+                    document.write(`Phương trình có nghiệm kép: x1=x2=${-b / (2 * a)}`);
+                }
+                else {
+                    document.write('Phương trình vô nghiệm');
+                }
+            }
+        }
+        giaiPTBac2(8, 12, -20);
+    </script>
+</body>
+
+</html>
